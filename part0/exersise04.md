@@ -7,9 +7,9 @@ sequenceDiagram
     
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
-    server-->>browser: HTML document
+    server-->>browser: URL redirect to /exampleapp/notes
     deactivate server
-    Note right of browser: Server responds with status 302 - URL redirect to /notes
+    Note right of browser: Server responds with status 302 (URL redirect)
     
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
